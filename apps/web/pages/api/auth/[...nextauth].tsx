@@ -189,6 +189,7 @@ export default NextAuth({
     strategy: "jwt",
   },
   cookies: defaultCookies(WEBSITE_URL?.startsWith("https://")),
+  secret: process.env.NEXTAUTH_SECRET,
   pages: {
     signIn: "/auth/login",
     signOut: "/auth/logout",
